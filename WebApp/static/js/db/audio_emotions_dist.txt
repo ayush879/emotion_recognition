@@ -1,0 +1,15 @@
+EMOTION,VALUE
+female_angry,0
+female_disgust,0
+female_fear,0
+female_happy,0
+female_neutral,0
+female_sad,0
+female_surprise,0
+male_angry,0
+male_disgust,7
+male_fear,0
+male_happy,0
+male_neutral,69
+male_sad,23
+male_surprise,0

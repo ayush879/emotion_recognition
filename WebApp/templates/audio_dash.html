@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+      <script type="text/javascript" src="/static/js/d3/d3.js"></script>
+      <script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+    <title>Dashboard</title>
+    <style>
+    .header {
+			padding: 60px;
+  			text-align: center;
+  			background: #00FA9A;
+  			color: white;
+  			font-size: 30px;
+  		}
+    </style>
+  </head>
+  <div align="center">
+  <form method=post enctype=multipart/form-data>
+  <body bgcolor="white" id="body">
+                      <div class="header">
+                        <h1>SPEECH EMOTION RECOGNITION</h1>
+                      </div>
+
+  <br>
+    
+  <br>
+
+  {% block body %}
+
+  
+    
+   <div class="row">
+   <h2><i>Perceived emotions</i></h2>
+   <br>
+   <br>
+      
+      <br>
+        <p>Your most frequent emotion is : <b>{{emo}}</b></p>
+        <div class="parent" id="center-col" align="center">
+          
+        </div>
+      <br>
+    </div>
+  </div>
+  
+  <div class="row">
+    
+    <br>
+    <br>
+   
+   <div class="column" id="left-col" align="center">
+       
+     </div>
+  </div>
+
+  <form>
+    <input type="button" value="Back" onclick="history.go(-1)">
+  </form>
+
+  {% endblock %}
+
+</body>
+</html>

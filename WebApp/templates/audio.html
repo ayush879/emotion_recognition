@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/CSS/style.css">
+    <title>EMOTION RECOGNITION</title>
+    <style>
+    .header {
+			padding: 60px;
+  			text-align: center;
+  			background: #00FA9A;
+  			color: white;
+  			font-size: 30px;
+  		}
+    </style>
+  </head>
+  <div align="center">
+  <form method=post enctype=multipart/form-data></form>
+  <body bgcolor="white" id="body">
+          <div class="header">
+            <h1>SPEECH EMOTION RECOGNITION</h1>
+          </div>
+      
+     {% block body %}
+     <div class="column_home" id="left-col" align="center">
+         <form action="/audio_index" method="post" align="center">
+         </form>
+     </div>
+
+        <br>
+        <br>
+
+        <form action="/audio_recording" method="post">
+          <input type="submit" style="background-color:#72A4D2" name="audio_recording" value="Start Recording">
+        </form>
+
+        <br>
+        <br>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <div style="background-color:#72A4D2" class="Won">
+                <span  class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                {{ message }}
+              </div>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
+        <br>
+        
+
+        <!--
+        Emotion analysis button
+        -->
+        {% if display_button == True %}
+          <form action="/audio_dash" method="get">
+            <input type="submit" style="background-color:#72A4D2" name="audio_analysis" value="Get Emotion Analysis">
+          </form>
+        {% endif %}
+
+    {% endblock %}
+
+    
+    <br>
+    <form>
+    <input type="button" value="Back" onclick="history.go(-1)">
+  </form>
+  
+    <br>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+EMOTIONS
+male_sad
+male_sad
+male_neutral
+male_neutral
+male_neutral
+male_neutral
+male_neutral
+male_neutral
+male_neutral
+male_neutral
+male_neutral
+male_disgust
+male_sad
